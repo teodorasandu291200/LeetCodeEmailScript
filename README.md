@@ -15,22 +15,24 @@ This Python script fetches the daily LeetCode coding challenge and emails it to 
 
 ## Setup Instructions
 
-### 1. Clone the repository
 
-```bash
-git clone <git@github.com:teodorasandu291200/LeetCodeEmailScript.git>
-cd <git@github.com:teodorasandu291200/LeetCodeEmailScript.git>
+# 1. Clone the Repository
 
-### 2. Create and activate venv (recommended)
+git clone git@github.com:teodorasandu291200/LeetCodeEmailScript.git
+cd LeetCodeEmailScript
+
+# 2. Create and Activate a Virtual Environment
+
 python -m venv venv
 .\venv\Scripts\activate     # Windows
 source venv/bin/activate    # macOS/Linux
 
-### 3. Install dependencies
+# 3. Install dependencies
+
 pip install -r requirements.txt
 
 
-### 4. Setup SendGrid free(tier) account
+# 4. Setup SendGrid free(tier) account
 SendGrid is a popular free-tier SMTP service. Here's how to set it up:
 
 1️⃣ Sign up for a free SendGrid account.
@@ -41,7 +43,7 @@ SendGrid is a popular free-tier SMTP service. Here's how to set it up:
 6️⃣ Go to Settings > API Keys.
 7️⃣ Create an API key (e.g. "LeetCodeEmailScript").
 
-### 5. Create config.json in root folder:
+# 5. Create config.json in root folder:
 
 {
   "smtp_server": "smtp.sendgrid.net",
@@ -51,7 +53,7 @@ SendGrid is a popular free-tier SMTP service. Here's how to set it up:
   "to_email": "your_personal_email@example.com"
 }
 
-### 6. Create .bat for task scheduler automation
+# 6. Create .bat for task scheduler automation
 
 a. Create run_script.bat in root folder
 b. Paste this content into it:
@@ -65,7 +67,7 @@ call venv\Scripts\activate.bat
 REM Run the script
 python main.py
 
-### 7. Create .bat for task scheduler automation
+# 7. Create .bat for task scheduler automation
 Open Task Scheduler (press Win + R, type taskschd.msc, hit Enter).
 Click Create Basic Task… on the right.
 Name it (e.g. LeetCode Daily Email), click Next.
